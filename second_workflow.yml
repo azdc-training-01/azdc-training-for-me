@@ -26,7 +26,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: static-website
-          path: .vuepress/ azdc-training-for-me/README.md 
+          path: .vuepress/azdc-training-for-me 
 
   deploy:
     runs-on: ubuntu-latest
@@ -43,6 +43,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v3
         with:
-          build_dir: .vuepress/ azdc-training-for-me/README.md 
+          build_dir: .vuepress/azdc-training-for-me 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
